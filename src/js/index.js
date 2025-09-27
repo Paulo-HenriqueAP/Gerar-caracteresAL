@@ -214,7 +214,7 @@ function contador() {
         textCont.textContent = nowN;
         if (nowN <= 0) {
             nowN = maxN;
-            textCont.textContent = "✔️";
+            textCont.textContent = "🔎";
         }
     }, 1000);
 };
