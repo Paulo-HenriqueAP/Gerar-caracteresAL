@@ -1,12 +1,12 @@
 body {
-    margin: 0;
     background-color: black;
     user-select: none;
-    padding: 0;
 }
 
 * {
     font-family: monospace;
+    margin: 0;
+    padding: 0;
 }
 
 button:hover {
@@ -14,27 +14,6 @@ button:hover {
     filter: brightness(90%);
 }
 
-#AP {
-    position: fixed;
-    width: 15%;
-    right: 0%;
-    text-align: center;
-}
-
-#AP:hover {
-    background-color: aliceblue;
-    color: black;
-}
-
-.APl {
-    background-color: darkgray;
-    color: darkgray;
-}
-
-.APc {
-    background-color: #50C878;
-    color: #50C878;
-}
 
 
 #telaPC {
@@ -42,7 +21,7 @@ button:hover {
     height: 100%;
     width: 85%;
     left: 0%;
-    top: 15px;
+    top: 35px;
     word-break: break-all;
     overflow: auto;
 }
@@ -51,7 +30,6 @@ button:hover {
 #palavraPC {
     position: absolute;
     word-wrap: break-word;
-    font-size: medium;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -69,11 +47,16 @@ button:hover {
     text-align: center;
     right: 0;
     width: 15%;
-    top: 15px;
+    top: 0;
 }
 
 #stuffs li {
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    margin-top: 6px;
 }
 
 #copiarPC {
@@ -88,37 +71,20 @@ button:hover {
     height: 100%;
 }
 
-#config {
-    position: absolute;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 85%;
-    font-size: X-small;
-    top: 0;
-    height: 15px;
-    animation-duration: 5s;
-    animation-name: start;
-}
-
 #configLista {
-    position: absolute;
-    list-style: none;
-    padding: 0%;
-    transform: translateX(-50%);
-    left: 42.5%;
-}
-
-li {
-    margin: 5px;
-}
-
-ul {
     background-color: black;
-    color: whitesmoke;
-    text-align: center;
-    border-radius: 2px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+}
+
+#configLista li {
+    list-style: none;
+    padding: 6px;
 }
 
 #diversos,
@@ -126,19 +92,21 @@ ul {
 #numeros,
 #letras_numeros,
 #alf,
-/*#comoUsar,
-#tarefas,*/
-#pal,
-#cont {
+#pal {
     border-radius: 2px;
     width: 100%;
     cursor: pointer;
-    font-size: x-small;
     border: none;
+    padding: 0;
+    height: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
 #diversos {
-    background-color: orangered;
+    background-color: #F2F3F4;
+    opacity: 85%;
 }
 
 #letras {
@@ -152,7 +120,6 @@ ul {
 #letras_numeros {
     background-color: wheat;
 }
-
 #alf {
     background-color: aquamarine;
 }
@@ -162,18 +129,21 @@ ul {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 
 #Qp {
-    font-size: xx-small;
-    width: 55px;
+    display: block;
+    width: 80px;
     border: none;
     border-radius: 2px;
     background-color: snow;
     padding: 0%;
     text-align: center;
+    height: 20px;
+    padding: 3px;
+    font-size: x-large;
 }
 
 .bloquear {
@@ -196,7 +166,8 @@ ul {
 }
 
 .diversosPCor {
-    background-color: orangered;
+    background-color: #F2F3F4;
+    opacity: 85%;
 }
 
 .alfabetosPCor {
@@ -207,108 +178,10 @@ ul {
     background-color: #50C878;
 }
 
-
-
-@keyframes start {
-    0% {
-        background-color: black;
-    }
-
-    50% {
-        background-color: steelblue;
-    }
-}
-
 #mudar_Array {
-    position: absolute;
-    right: 3%;
     border: none;
     background-color: transparent;
-    font-size: small;
+    font-size: large;
+    text-align: center;
+    cursor: pointer;
 }
-
-/*
-#palavraMob {
-    position: absolute;
-    word-wrap: break-word;
-    font-size: medium;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    user-select: text;
-    cursor: text;
-    border: none;
-}
-
-.letrasNumerosMCor {
-    background-color: steelblue;
-}
-
-.letrasMCor {
-    background-color: tan;
-}
-
-.numerosMCor {
-    background-color: palegoldenrod;
-
-}
-
-.diversosMCor {
-    background-color: firebrick;
-}
-
-.alfabetosMCor {
-    background-color: turquoise;
-}
-
-.palMcor {
-    background-color: whitesmoke;
-}
-
-#comoUsar {
-    background-color: darkgray;
-}
-
-#tarefas {
-    background-color: skyblue;
-}
-
-#tutoV {
-    position: absolute;
-    width: 100%;
-    height: 95%;
-    bottom: 0;
-}
-
-#fecharTutoV {
-    position: absolute;
-    width: 100%;
-    height: max-content;
-    min-height: 5%;
-
-}
-
-#copiarMob {
-    border: none;
-    position: fixed;
-    right: 0%;
-    width: 15%;
-    height: 49%;
-    bottom: 0%;
-    background-color: whitesmoke;
-    box-shadow: 10px 10px 10px 10px black;
-}
-
-#telaMob {
-    position: fixed;
-    height: 49%;
-    width: 85%;
-    left: 0%;
-    bottom: 0%;
-    max-height: 49%;
-    word-break: break-all;
-    max-width: 85%;
-    overflow: auto;
-}
-
-*/

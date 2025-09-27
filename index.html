@@ -15,51 +15,33 @@
         <button id="copiarPC">⧉</button>
     </div>
 
-    <button id="config">☰</button>
 
-    <!--<div id="telaMob" class="corM">
-        <button id="palavraMob"></button>
-        <button id="copiarMob">⧉ 📱</button>
-    </div>
--->
-    <ul id="configLista" class="hidden">
-        ⚞somente⚟
-        <li><Button id="pal" onclick="changeArray()">palavras</Button>
-            <select id="mudar_Array">
-                <option value="BR">BR</option>
-                <option value="EN">EN</option>
-                <option value="ES">ES</option>
-            </select>
+    <ul id="configLista">
+        <li>
+            <Button id="pal" onclick="changeArray()"><img src="src/css/dic.svg" alt="">
+                <select id="mudar_Array">
+                    <option disabled selected value style="display: none;"></option>
+                    <option value="BR">🇧🇷</option>
+                    <option value="EN">🇺🇸</option>
+                    <option value="ES">🇪🇸</option>
+                    <option value="FR">🇫🇷</option>
+                    <option value="IT">🇮🇹</option>
+                </select>
+            </Button>
         </li>
-        <li><Button id="letras_numeros">letras e números</Button></li>
-        <li><Button id="letras">letras</Button></li>
-        <li><Button id="numeros">números</Button></li>
-        <li><button id="diversos">diversos</button></li>
-        <li><Button id="alf">alfabetos</Button></li>
-        <li><Button style="background-color: silver;" onclick="contador()" id="cont">contador</Button></li>
-        <!-- <li><button id="tarefas" onclick="tarefas()">tarefas</button></li>-->
-        <!--<li><button id="comoUsar" onclick="videoTuto()">como usar</button></li>-->
-        <input id="Qp" placeholder="quant PC" onchange="numeroTrocadoPC()" type="number" min="0">
-        <!-- <input id="Qm" placeholder="quant MB" onchange="numeroTrocadoMob()" type="number" min="0">-->
-        <!--<li style="background-color: #00A4EF; border-radius: 3px; text-decoration: none;"><a href="https://www.bing.com/" target="_blank" rel="noopener noreferrer">Bing</a></li>-->
+        <li><Button id="letras_numeros"><img src="src/css/palaNume.svg" alt=""></Button></li>
+        <li><Button id="letras"><img src="src/css/palavras.svg" alt=""></Button></li>
+        <li><Button id="numeros"><img src="src/css/numeros.svg" alt=""></Button></li>
+        <li><button id="diversos"><img src="src/css/emoji.svg" alt=""></button></li>
+        <input id="Qp" class="hidden" placeholder="quant" onchange="numeroTrocadoPC()" type="number" min="0" value="23">
     </ul>
-
-    <span id="AP" class="APl">ΛP</span>
 
     <div id="stuffs" class="hidden">
         <li id="contadorTexto" class="hidden" style="font-size: x-large;">8</li>
-        <li style="color: grey;">🖥️:30</li>
-        <li style="color: grey;"><span style="border-radius: 6px; background-color: #CCCCCC;">📱</span>:20</li>
-        <li style="font-size: large;" id="done">✓ 0</li>
+        <li style="color: grey;"><img src="src/css/pc.svg" alt="">&nbsp;30</li>
+        <li style="color: grey;"><img src="src/css/mob.svg" alt="">&nbsp;20</li>
+        <li style="font-size: large; margin: 6px;" id="done">✓ 0</li>
     </div>
-
-
-    <!--
-    <iframe id="tutoV" src="" class="hidden" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    <button id="fecharTutoV" class="hidden" onclick="videoTuto()">✖</button>
-    -->>
 
     <script src="src/js/index.js"></script>
     <script src="src/txt/arraysC.js"></script>

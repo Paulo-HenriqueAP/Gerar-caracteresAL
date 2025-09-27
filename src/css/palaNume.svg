@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="36" height="36" viewBox="0 0 36 36" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.6</desc>
+<defs>
+</defs>
+<g transform="matrix(0.04 0 0 0.04 18.42 25.82)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  transform=" translate(-470, 480)" d="M 220 -360 v -188 h -60 v -52 h 112 v 240 h -52 Z m 134.67 0 v -106.67 q 0 -15.66 10.16 -25.83 q 10.17 -10.17 25.84 -10.17 h 92 V -548 h -128 v -52 h 144 q 15.66 0 25.83 10.17 q 10.17 10.16 10.17 25.83 v 70.67 q 0 15.66 -10.17 25.83 q -10.17 10.17 -25.83 10.17 h -92 V -412 h 128 v 52 h -180 Z M 600 -360 v -52 h 128 v -45.33 h -88 v -45.34 h 88 V -548 H 600 v -52 h 144 q 15.67 0 25.83 10.17 Q 780 -579.67 780 -564 v 168 q 0 15.67 -10.17 25.83 Q 759.67 -360 744 -360 H 600 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(0.04 0 0 0.04 18.42 11.82)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  transform=" translate(-480, 480)" d="M 671.33 -360 q -15.66 0 -25.83 -10.17 q -10.17 -10.16 -10.17 -25.83 v -168 q 0 -15.67 10.17 -25.83 Q 655.67 -600 671.33 -600 H 804 q 15.67 0 25.83 10.17 Q 840 -579.67 840 -564 v 44 h -52 v -28 H 687.33 v 136 H 788 v -28 h 52 v 44 q 0 15.67 -10.17 25.83 Q 819.67 -360 804 -360 H 671.33 Z M 380 -360 v -240 h 168.67 q 15.66 0 25.83 10.17 q 10.17 10.16 10.17 25.83 v 48 q 0 15.67 -10.17 25.83 Q 564.33 -480 548.67 -480 q 15.66 0 25.83 10.17 q 10.17 10.16 10.17 25.83 v 48 q 0 15.67 -10.17 25.83 Q 564.33 -360 548.67 -360 H 380 Z m 52 -146 h 100.67 v -42 H 432 v 42 Z m 0 94 h 100.67 v -42 H 432 v 42 Z m -312 52 v -204 q 0 -15.67 10.17 -25.83 Q 140.33 -600 156 -600 h 132.67 q 15.66 0 25.83 10.17 q 10.17 10.16 10.17 25.83 v 204 h -52 v -71.33 H 172 V -360 h -52 Z m 52 -123.33 h 100.67 V -548 H 172 v 64.67 Z" stroke-linecap="round" />
+</g>
+</svg>
