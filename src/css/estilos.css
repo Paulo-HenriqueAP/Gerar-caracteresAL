@@ -65,9 +65,9 @@ button:hover {
     right: 0%;
     width: 15%;
     height: 49%;
-    background-color: darkgrey;
+    background-color: whitesmoke;
     box-shadow: 10px 10px 10px 10px black;
-
+    opacity: 80%;
     height: 100%;
 }
 
@@ -120,12 +120,14 @@ button:hover {
 #letras_numeros {
     background-color: wheat;
 }
+
 #alf {
     background-color: aquamarine;
 }
 
 #pal {
-    background-color: #50C878;
+    background-color: #2b2b2b;
+    color: #F2F3F4;
 }
 
 .hidden {
@@ -175,7 +177,11 @@ button:hover {
 }
 
 .palPcor {
-    background-color: #50C878;
+    background-color: #2b2b2b;
+}
+
+.palPcor #palavraPC {
+    color: white;
 }
 
 #mudar_Array {
@@ -184,4 +190,6 @@ button:hover {
     font-size: large;
     text-align: center;
     cursor: pointer;
+    color: white;
+    color: grey;
 }
