@@ -22,6 +22,7 @@ let arrayTXT;
 let mudarArray = document.getElementById("mudar_Array");
 let done = 0;
 
+
 corFundoPC.classList.add("palPcor");
 
 function definirCaractereAleatorio() {
@@ -31,7 +32,7 @@ function definirCaractereAleatorio() {
 
 function limpar() {
     espacoPalavraPC.textContent = "";
-    copiarComputador.style = "background-color: whitesmoke;";
+    copiarComputador.style.backgroundColor = "whitesmoke";
     document.getElementById("Qp").value = "30";
     numeroP = 30;
     cont = 0;
@@ -43,9 +44,6 @@ function limpar() {
     corFundoPC.classList.remove("palPcor");
     document.getElementById("Qp").classList.remove("bloquear");
     document.getElementById("Qp").classList.remove("hidden");
-
-    let pResumo = document.getElementById("resumoDinamico");
-    if (pResumo) pResumo.innerHTML = "";
 }
 
 function changeArray() {
@@ -122,7 +120,7 @@ document.getElementById("diversos").addEventListener("click", () => {
 function numeroTrocadoPC() {
     cont = 0;
     espacoPalavraPC.textContent = "";
-    copiarComputador.style = "background-color: whitesmoke;";
+    copiarComputador.style.backgroundColor = "whitesmoke";
     numeroP = document.getElementById("Qp").value;
 
     switch (document.getElementById("Qp").value) {
@@ -153,7 +151,8 @@ copiarComputador.addEventListener("click", function () {
         return;
     }
 
-    copiarComputador.style = "background-color: #50C878; font-size: xx-large;";
+    copiarComputador.style.backgroundColor = "#50C878";
+    copiarComputador.style.fontSize = "xx-large";
     copiarComputador.textContent = ":>";
     
     setTimeout(function () {
@@ -169,7 +168,9 @@ copiarComputador.addEventListener("click", function () {
                 definirPC();
         }
         
-        copiarComputador.style = "background-color: whitesmoke;";
+        copiarComputador.style.backgroundColor = "whitesmoke";
+        copiarComputador.style.fontSize = "small"; 
+        
         done++;
         document.getElementById("done").textContent = "✓ " + done;
     }, 200);
@@ -195,11 +196,8 @@ function definirPalavras() {
 
 function defPC() {
     let palavraSorteada = arrayTXT[Math.floor(Math.random() * arrayTXT.length)];
-    if (vetor === "off") {
-        summaryWord(palavraSorteada);
-    } else {
-        espacoPalavraPC.textContent = palavraSorteada;
-    }
+    let prefixo = beforeWord[Math.floor(Math.random() * beforeWord.length)] || "";
+    espacoPalavraPC.textContent = `${prefixo} ${palavraSorteada}`.trim();
 }
 
 let textCont = document.getElementById("contadorTexto");
@@ -226,63 +224,4 @@ function contador() {
             textCont.textContent = "🔎";
         }
     }, 1000);
-}
-
-async function summaryWord(summaryIt) {
-    let langKey = Object.keys(words).find(key => words[key] === txt).toLowerCase();
-    let langAPI = langKey === "br" ? "pt" : langKey;
-    const cleanWord = summaryIt.trim().toLowerCase();
-
-    let espacoPalavraPC = document.getElementById("palavraPC");
-    espacoPalavraPC.textContent = "..."; 
-
-    try {
-        const searchUrl = `https://${langAPI}.wiktionary.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(cleanWord)}&srwhat=nearmatch&format=json&origin=*`;
-        const searchRes = await fetch(searchUrl);
-
-        if (!searchRes.ok) throw new Error("Erro fetch 1");
-
-        const searchData = await searchRes.json();
-        const firstResult = searchData?.query?.search?.[0];
-
-        if (firstResult) {
-            const pageTitle = firstResult.title;
-            const parseUrl = `https://${langAPI}.wiktionary.org/w/api.php?action=parse&page=${encodeURIComponent(pageTitle)}&prop=text&format=json&origin=*`;
-            const parseRes = await fetch(parseUrl);
-
-            if (!parseRes.ok) throw new Error("Erro fetch 2");
-
-            const parseData = await parseRes.json();
-            const html = parseData?.parse?.text?.["*"];
-
-            if (html) {
-                const doc = new DOMParser().parseFromString(html, "text/html");
-                doc.querySelectorAll("style, script, .metadata, .ambox").forEach(el => el.remove());
-
-                let defs = [...doc.querySelectorAll("ol li")]
-                    .map(li => li.innerText.trim().replace(/\n/g, ' '))
-                    .filter(x => x.length > 10 && !x.includes(".mw-parser-output"))
-                    .slice(0, 1);
-
-                if (defs.length === 0) {
-                    defs = [...doc.querySelectorAll("p")]
-                        .map(par => par.innerText.trim().replace(/\n/g, ' '))
-                        .filter(x => x.length > 20 && !x.includes(".mw-parser-output"))
-                        .slice(0, 1);
-                }
-
-                if (defs.length > 0) {
-                    let primeiraFrase = defs[0].split('.')[0]; 
-                    
-                    espacoPalavraPC.textContent = summaryIt + " - " + primeiraFrase;
-                    return;
-                }
-            }
-        }
-        
-        throw new Error("Error");
-
-    } catch (err) {
-        espacoPalavraPC.textContent = summaryIt;
-    }
 }
